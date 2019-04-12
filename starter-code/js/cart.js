@@ -41,13 +41,15 @@ function showCart() {
     console.log(items[i]);
     var trEl = document.createElement('tr');
     var tdEl = document.createElement('td');
-    tdEl.textContent = `${item.product}`;
+    tdEl.textContent  = 'X';
     trEl.appendChild(tdEl);
-    tdEl.textContent  = `${item.quantity}`;
+    tdEl = document.createElement('td');
+    tdEl.textContent = `${items[i].product}`;
     trEl.appendChild(tdEl);
-    tdEl.textContent  = '<a href="#">X</a>';;
+    tdEl = document.createElement('td');
+    tdEl.textContent  = `${items[i].quantity}`;
     trEl.appendChild(tdEl);
-    tableBody.appendChild(tr);
+    tableBody.appendChild(trEl);
   }
 }
 
@@ -56,7 +58,7 @@ function removeItemFromCart(event) {
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table
-  
+
 
 }
 
