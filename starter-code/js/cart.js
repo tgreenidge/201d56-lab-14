@@ -41,7 +41,11 @@ function showCart() {
     console.log(items[i]);
     var trEl = document.createElement('tr');
     var tdEl = document.createElement('td');
-    tdEl.textContent = `${item.product} | Quantity: ${item.quantity} <a>X></a>`;
+    tdEl.textContent = `${item.product}`;
+    trEl.appendChild(tdEl);
+    tdEl.textContent  = `${item.quantity}`;
+    trEl.appendChild(tdEl);
+    tdEl.textContent  = '<a href="#">X</a>';;
     trEl.appendChild(tdEl);
     tableBody.appendChild(tr);
   }
