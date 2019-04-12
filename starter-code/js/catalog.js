@@ -26,8 +26,10 @@ function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
   event.preventDefault();
+  var item = event.target[1].value;
+  var quantity = event.target[2].value;
   // Do all the things ...
-  addSelectedItemToCart();
+  addSelectedItemToCart(item, quantity);
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
@@ -35,12 +37,11 @@ function handleSubmit(event) {
 }
 
 // TODO: Add the selected item and quantity to the cart
-function addSelectedItemToCart() {
+function addSelectedItemToCart(item, quantity) {
   // TODO: suss out the item picked from the select list
-  var selectElement = document.getElementById('items');
-  console.log(selectElement);
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+  cart.addItem(item, quantity);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
