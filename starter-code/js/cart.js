@@ -41,7 +41,7 @@ function showCart() {
     console.log(items[i]);
     var trEl = document.createElement('tr');
     var tdEl = document.createElement('td');
-    tdEl.textContent  = 'X';
+    tdEl.innerHTML  = '<a href="#"> X </a>';
     trEl.appendChild(tdEl);
     tdEl = document.createElement('td');
     tdEl.textContent = `${items[i].product}`;
